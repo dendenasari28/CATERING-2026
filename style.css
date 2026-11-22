@@ -6,7 +6,7 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Asap Sharp", sans-serif;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 :root {
   /* warna */
@@ -26,18 +26,22 @@ font-family: "Asap Sharp", sans-serif;
 
 /* navbar */
 nav {
+  position: fixed;
   width: 100%;
   height: 60px;
   display: flex;
   justify-content: space-around;
   padding: 5px 6%;
   border-bottom: 1px solid var(--secondary);
+  background-color: var(--putih);
+  z-index: 9999;
 }
 nav .logo {
   width: 180px;
   height: 100%;
   display: flex;
   align-items: center;
+  overflow: hidden;
 }
 nav .logo img {
   width: 180px;
@@ -87,6 +91,58 @@ nav .tombol {
 }
 /* navbar end*/
 
+/* hero */
+.hero {
+  /* position: relative; */
+  width: 100%;
+  /* height: 70vh; */
+  overflow-y: hidden;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+.heo .hero-bg img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: scale-down;
+  object-position: center;
+}
+.hero .hero-teks {
+  position: absolute;
+  padding: 20px 6%;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+.hero .hero-teks img {
+  width: 200px;
+}
+.hero-teks h1 {
+  font-size: 40px;
+  font-family: "Lora", serif;
+}
+.hero-teks p {
+  font-size: 20px;
+  font-weight: 500;
+}
+.hero-teks .cta {
+  display: flex;
+  gap: 50px;
+  margin-top: 50px;
+}
+.hero-teks .cta span {
+  background-color: var(--primary);
+  width: 200px;
+  text-align: center;
+  padding: 10px 12px;
+  border-radius: 12px;
+  color: var(--putih);
+}
+/* hero end */
+
 /* RESPONSIVE HP, TABLET */
 /* 1.TABLET */
 @media only screen and (max-width: 768px) {
@@ -116,11 +172,11 @@ nav .tombol {
 /* Responsive hape */
 @media only screen and (max-width: 600px) {
   nav .menus {
-    position: absolute;
+    position: static;
     right: -100%;
   }
   nav .menus.active {
-    z-index: 15;
+    position: inherit;
     top: 60px;
     background-color: var(--secondary);
     right: 0;
@@ -133,6 +189,7 @@ nav .tombol {
     display: flex;
     flex-direction: column;
     gap: 50px;
+    transition: 0.5s ease-in-out;
   }
   nav .menus .menu i,
   span {
@@ -143,7 +200,9 @@ nav .tombol {
     width: 130px;
   }
   nav .tombol {
+    justify-content: space-around;
     gap: 20px;
+    overflow-y: hidden;
   }
   .tombol .tbl1 {
     padding: 9px 8px;
@@ -151,5 +210,6 @@ nav .tombol {
   #hamburger {
     display: inline;
     font-size: 27px;
+    cursor: pointer;
   }
 }
