@@ -31,7 +31,7 @@ nav {
   height: 60px;
   display: flex;
   justify-content: space-around;
-  padding: 5px 6%;
+  padding: 5px 2%;
   border-bottom: 1px solid var(--secondary);
   background-color: var(--putih);
   z-index: 9999;
@@ -73,7 +73,6 @@ nav .menus {
 }
 nav .tombol {
   display: flex;
-  justify-content: center;
   align-items: center;
   gap: 40px;
 }
@@ -171,14 +170,15 @@ nav .tombol {
 
 /* Responsive hape */
 @media only screen and (max-width: 600px) {
-  nav .menus {
-    position: static;
-    right: -100%;
+  nav {
+    padding: 10px 0;
+    overflow-y: hidden;
   }
+
   nav .menus.active {
     position: inherit;
     top: 60px;
-    background-color: var(--secondary);
+    background-color: var(--hitam);
     right: 0;
     width: 200px;
     height: 100vh;
@@ -186,7 +186,6 @@ nav .tombol {
     padding: 20px;
     justify-content: left;
     align-items: start;
-    display: flex;
     flex-direction: column;
     gap: 50px;
     transition: 0.5s ease-in-out;
@@ -197,15 +196,17 @@ nav .tombol {
     font-size: 15px;
   }
   nav .logo img {
+    left: 0;
+    position: absolute;
     width: 130px;
   }
   nav .tombol {
-    justify-content: space-around;
-    gap: 20px;
-    overflow-y: hidden;
+    position: absolute;
+    right: 0;
   }
-  .tombol .tbl1 {
+  .tombol .tbl1 span {
     padding: 9px 8px;
+    font-size: 12px;
   }
   #hamburger {
     display: inline;
