@@ -142,22 +142,75 @@ nav .tombol {
 }
 /* hero end */
 
+/* service */
+.service {
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.service .serivice-judul {
+  display: flex;
+  justify-content: center;
+}
+.service .service-cards {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+.service-cards .card {
+  width: 350px;
+  padding: 12px;
+  background-color: #f0f0f0;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+.card img {
+  border-radius: 12px;
+}
+.card i {
+  font-size: 35px;
+  color: var(--primary);
+}
+.card h3 {
+  font-size: 23px;
+  color: var(--hitam);
+}
+.card p {
+  font-size: 14px;
+}
+.card button {
+  width: 160px;
+  padding: 12px;
+  color: var(--primary);
+}
+/* service end */
+
 /* RESPONSIVE HP, TABLET */
 /* 1.TABLET */
 @media only screen and (max-width: 768px) {
   nav {
-    padding: 10px 0;
+    height: 70px;
+    padding: 5px 0;
   }
   nav .menus {
+    overflow-y: hidden;
     justify-content: center;
-    gap: 7px;
+    gap: 12px;
   }
   .menus .menu:hover::before {
-    width: 50px;
+    width: 80px;
   }
   nav .menus .menu i,
   span {
-    font-size: 12px;
+    font-size: 14px;
   }
   .tombol .tbl1 {
     padding: 5px 7px;
@@ -166,15 +219,37 @@ nav .tombol {
     border-radius: 12px;
     display: flex;
   }
+  /* hero bagian tablet */
+  .hero {
+    left: 20px;
+  }
+
+  .hero .hero-teks {
+    margin-top: 100px;
+    text-align: center;
+    padding: 20px 3%;
+    cursor: pointer;
+  }
 }
 
 /* Responsive hape */
 @media only screen and (max-width: 600px) {
   nav {
-    padding: 10px 0;
-    overflow-y: hidden;
+    /* height: 70px; */
+    overflow: hidden;
   }
-
+  .menus .menu {
+    width: 200px;
+    position: relative;
+    padding: 10px;
+    justify-content: start;
+  }
+  .menus .menu::before {
+    top: 35px;
+  }
+  .menus .menu:hover::before {
+    width: 100px;
+  }
   nav .menus.active {
     position: inherit;
     top: 60px;
@@ -203,6 +278,7 @@ nav .tombol {
   nav .tombol {
     position: absolute;
     right: 0;
+    width: 200px;
   }
   .tombol .tbl1 span {
     padding: 9px 8px;
@@ -211,6 +287,27 @@ nav .tombol {
   #hamburger {
     display: inline;
     font-size: 27px;
+    cursor: pointer;
+  }
+  .hero .hero-teks img {
+    display: none;
+  }
+  .hero .hero-teks {
+    margin-top: 200px;
+    align-items: center;
+  }
+  .hero .hero-teks h1 {
+    font-size: 30px;
+  }
+  .hero .hero-teks h1:nth-child(3) {
+    font-size: 26px;
+  }
+  .hero .hero-teks p {
+    font-size: 15px;
+  }
+  .hero .hero-teks .cta span {
+    font-size: 15px;
+    width: 130px;
     cursor: pointer;
   }
 }
