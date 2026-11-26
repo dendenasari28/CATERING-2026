@@ -237,7 +237,7 @@ nav .tombol {
   color: var(--hitam);
 }
 .card button {
-  width: 160px; 
+  width: 160px;
   padding: 12px;
   color: var(--primary);
 }
@@ -245,6 +245,52 @@ nav .tombol {
   font-size: 18px;
 }
 /* unggulan end */
+
+/* about  */
+.about {
+  padding: 20px 4%;
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.about .about-judul {
+  display: flex;
+  justify-content: center;
+}
+.about .about-cards {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+.about-cards .card {
+  width: 200px;
+  padding: 12px;
+  background-color: #f0f0f0;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  flex-grow: 1;
+  /* Tampilan default (Desktop: 4 item sejajar dalam 1 baris) */
+  flex: 0 0 calc(25% - 12px);
+}
+
+.card img {
+  border-radius: 12px;
+  /* unutk menghilangkan bg pada img */
+  mix-blend-mode: multiply;
+}
+.card h3 {
+  font-size: 23px;
+  color: var(--hitam);
+}
+/* about  end */
 
 /* RESPONSIVE HP, TABLET */
 /* 1.TABLET */
@@ -282,6 +328,11 @@ nav .tombol {
     text-align: center;
     padding: 20px 3%;
     cursor: pointer;
+  }
+
+  .about-cards .card {
+    /* 50% dikurangi setengah dari nilai gap (16px / 2 = 8px) */
+    flex: 0 0 calc(50% - 8px);
   }
 }
 
@@ -362,5 +413,14 @@ nav .tombol {
     font-size: 15px;
     width: 130px;
     cursor: pointer;
+  }
+  /* about */
+  .card h3 {
+    font-size: 16px;
+    color: var(--hitam);
+  }
+  .card p {
+    font-size: 10px;
+    color: var(--hitam);
   }
 }
