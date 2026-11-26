@@ -144,6 +144,7 @@ nav .tombol {
 
 /* service */
 .service {
+  padding: 20px 4%;
   margin-top: 30px;
   width: 100%;
   display: flex;
@@ -171,7 +172,9 @@ nav .tombol {
   justify-content: center;
   flex-direction: column;
   gap: 10px;
+  flex-grow: 1;
 }
+
 .card img {
   border-radius: 12px;
 }
@@ -192,6 +195,56 @@ nav .tombol {
   color: var(--primary);
 }
 /* service end */
+
+/* unggulan  */
+.unggulan {
+  padding: 20px 4%;
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.unggulan .unggulan-judu {
+  display: flex;
+  justify-content: center;
+}
+.unggulan .unggulan-cards {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+.unggulan-cards .card {
+  width: 350px;
+  padding: 12px;
+  background-color: #f0f0f0;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  flex-grow: 1;
+}
+
+.card img {
+  border-radius: 12px;
+}
+.card h3 {
+  font-size: 23px;
+  color: var(--hitam);
+}
+.card button {
+  width: 160px; 
+  padding: 12px;
+  color: var(--primary);
+}
+.card i {
+  font-size: 18px;
+}
+/* unggulan end */
 
 /* RESPONSIVE HP, TABLET */
 /* 1.TABLET */
